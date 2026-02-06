@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+	<title>Setting up iSphere</title>
+</head>
+
+<body>
+<h1>Setting up iSphere</h1>
+<p>
+<a id="connect_to_sourceforge"></a>
+<h2>Connecting to GitHub</h2>
+<p>
+Open the "Git Repositories" view and paste the SSH URL for cloning the iSphere
+repository into the view. A <i>Clone Git Repository</i> window should open. Confirm
+the settings and click "Next". Confirm cloning the <i>main</i> branch and click
+"Next". Validate the suggested repository folder on your computer and click "Finish".
+<p>
+<div class="codeIndent">git@github.com:rdi-open-source/isphere.git</div>
+<p>
+<img alt="iSphere repository SSH URL" src="./assets/git_repositories_view.png">
+<p>
+<h2>Installing the iSphere Ant Plug-in</h2>
+<p>
+Next let's install the <i>iSphere Ant Plugin</i>, which provides some Ant tasks that we need to build the 
+plug-in. Open "Help -&gt; Install New Software..." and click the "Add" button. Enter a descriptive name, such
+as <i>iSphere Ant Plugin</i> and the location of the "iSphere Ant Contribution" zip file that you can find
+in directory "plug-ins" of the "iSphere Eclipse Setup" project.
+<p>
+<img alt="Install iSphere Ant Contribution" src="./assets/install_ant_contribution.png">
+<p>
+<h2>Setting the Java JREs</h2>
+<p>
+Now we need to set the Java JRE that we need to compile the iSphere plug-in. Because we want to be compatible with 
+RDi 9.6.0.13, we use that JRE to compile the classes. 
+<p>
+Open "Windows -&gt; Preferences -&gt; Java -&gt; Installed JREs". Click the "Add" button, select "Standard VM" and click "Next".
+Now select the RDi 9.6.0.13 JRE and give it the name "JRE 1.8.0 IBM J9". Please enter the same as shown. Do not change it:
+<p>
+<img alt="Install Java JRE" src="./assets/install_jre.png">
+<p>
+Message <i>The selected JRE does not support the current compiler compliance level of 11</i> can be ignored.
+<p>
+<h2>Setting Clean Up Defaults</h2>
+<p>
+The clean up profile is used to add missing source code or to remove unnessary code to/from a Java source file. It can 
+be applied to a source file automatically, when the source file is saved. A shared clean up profile that is used by all 
+developers is important, when the source code is stored in a repository, such as SVN. Then the clean up profile ensures, 
+that there are, for example, no missing <i>@override</i> annotations or unnecessary type casts.
+<p>
+Import the clean up profile from file "Preferences_Java_CodeStyle_CleanUp (iSphere)_3.6.xml" of the "iSphere Eclipse Setup".
+<p>
+<img alt="Set up the cleanup profile" src="./assets/codestyle_cleanup.png">
+<p>
+<h2>Setting Code Formatter Defaults</h2>
+<p>
+The code formatter profile defines the rules that are applied when a Java source file is formatted. Java source files can 
+be formatted automatically, when the source file is saved. It is important that all developers use the same formatting rules, 
+when the source code is stored in a repository, such as SVN, to avoid changes just because of different formatting styles.
+<p>
+Import the code formatter profile from file "Preferences_Java_CodeStyle_Formatter (iSphere)_3.6.xml" of the "iSphere Eclipse Setup".
+<p>
+<img alt="Set up the code formatter profile" src="./assets/codestyle_formatter.png">
+<p>
+<h2>Setting Code Templates Defaults</h2>
+<p>
+The Java code templates are used when creating a new Java file. The provided template modifies the existing "New Java files" template
+to add the iSphere copyright notice.
+<p>
+Import the code templates from file "Preferences_Java_CodeStyle_Code_Template (iSphere)_3.6.xml" of the "iSphere Eclipse Setup".
+<p>
+<img alt="Set up the code formatter profile" src="./assets/codestyle_codetemplates.png">
+<p>
+<h2>Setting Save Actions</h2>
+<p>
+The save actions are pretty useful if the is a need to automatically perform actions when a source file is saved. We use it
+to automatically clean up and format our Java source files. Please set your save actions as described below: 
+<p>
+<table>
+<tr><td>Enabled:</td><td>Perform the selected actions on save<td></tr>
+<tr><td>Enabled:</td><td>Format source code<td></tr>
+<tr><td>Enabled:</td><td>Format all lines<td></tr>
+<tr><td>Enabled:</td><td>Organize imports<td></tr>
+<tr><td>Disabled:</td><td>Additional actions<td></tr>
+</table>
+<p>
+<img alt="Set up the save actions" src="./assets/editor_saveactions.png">
+<p>
+<h2>Classpath Variables</h2>
+<p>
+Classpath variables are maintained from <i>Window - Preferences - Java - Build Path - Classpath Variables</i>.
+<p>
+<table border="0">
+<tr><td nowrap valign="top">ANT_HOME</td><td valign="top">-</td><td valign="top">Path to the IBM shared plugins folder.<br>Example: <i>c:/Program Files/IBM/SDPShared/plugins/org.apache.ant_1.7.1.v20100518-1145/</i></td><td valign="top">Required for the iSphere Ant Contribution project.</td></tr>
+<tr><td nowrap valign="top">IBM_SHARED_PLUGINS</td><td valign="top">-</td><td valign="top">Path to the IBM shared plugins folder.<br>Example: <i>C:/Program Files/IBM/SDPShared/plugins</i></td><td valign="top">Required for the iSphere JUnit project.</td></tr>
+</table>
+<p>
+<h2>Useful settings</h2>
+<p>
+<ul>
+<li>Preferences -&gt; General -&gt; Show heap status (enable)</li>
+<li>Preferences -&gt; General -&gt; Editors -&gt; Text Editors -&gt; Spelling (disable for slow PCs)</li>
+<li>Preferences -&gt; General -&gt; Keys: Filter for UNDO and copy entry "Ctrl+Z" to "Ctrl+Backspace".</li>
+<li>Preferences -&gt; General -&gt; Keys: Filter for GRAPH and remove entry "Show Revision graph" of category "SVN" [Unbind Command].<br>(Otherwise CTRL-ALT-Q does not work to get the '@'.)</li>
+</ul>
+<p>
+<h2>The iSphere Projects</h2>
+<p>
+The iSphere Git repository follows the standard naming conventions. The <i>main</i> branch contains the actual development
+code. The <i>tag</i> branches are used for creating tags of iSphere releases. With a tag it is 
+easy to check out a specific version of the project.
+<p>
+<table border="0">
+<tr>
+  <td>Tags</td>
+  <td>Branches</td>
+</tr>
+<tr>
+  <td><img alt="Git tags" src="./assets/git_tags.png"></td>
+  <td><img alt="Git branches" src="./assets/git_branches.png"></td>
+</tr>
+</table>
+<p>
+On your computer you will find the following folders:
+<p>
+<img alt="Git branches" src="./assets/local_folders.png">
+<p>
+<table>
+<tr><td valign="top">build</td><td valign="top">-</td><td>Projects used for building the plug-in.<td></tr>
+<tr><td valign="top">development</td><td valign="top">-</td><td>Development utilities.<td></tr>
+<tr><td valign="top">docs</td><td valign="top">-</td><td>iSphere homepage and update site.<td></tr>
+<tr><td valign="top">eclipse</td><td valign="top">-</td><td>Base projects not related to a target IDE.<td></tr>
+<tr><td valign="top">host</td><td valign="top">-</td><td>iSphere library.<td></tr>
+<tr><td valign="top">rse2</td><td valign="top">-</td><td>Projects specific to a target IDE.<td></tr>
+</table>
+<p>
+<a id="host_project"></a>
+<h2>The iSphere Host Project</h2>
+<p>
+Checking out the <i>iSphere</i> host project is a bit different from checking out the other projects, because
+you need to specify the name of your iSphere library at the project properties after you checked it out.
+<p> 
+You also need to change the i Project preferences to match the settings below, because we do not store source 
+sequence numbers in the repository: 
+<p>
+<img alt="i Project preferences" src="./assets/iproject_preferences.png">
+<p>
+<table>
+<tr><td class="important" >Do not forget to change your i Project preferences. All IBM i native source code must be stored in the 
+repository without sequence numbers.</td></tr>
+</table>
+<p>
+Now switch to the <i>i Projects</i> perspective and right-click the <i>iSphere</i> project. Select <i>Properties</i> and <i>i Project</i>
+and specify the connection to your host and the name of your iSphere library:
+<p>
+<img alt="Checking out the iSphere host project" src="./assets/isphere_iproject.png">
+<p>
+We use ISPHEREDVP for developing iSphere and ISPHERE for the production library. Library ISPHERE is built
+with the iSphere BUILD command from the command line as described in <a href="../build/build_isphere.html#library_build">Library Build</a>.
+<p>
+Now create the library that you associated to your i Project, if it does not yet exist:
+<p>
+<div class="codeCommand">CRTLIB LIB(ISPHEREDVP<br>
+TEXT('The iSphere Project - Development')</div> 
+<p>
+<iframe src="../../copyright.html" width="100%" frameborder="0" marginheight="0" marginwidth="0" ></iframe>
+</body>
+</html>
