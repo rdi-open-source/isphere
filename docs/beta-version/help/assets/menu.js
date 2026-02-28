@@ -5,7 +5,7 @@ document.write('\<ul id="treemenu" class="treeview">\
   <li><a href="../html/introduction/introduction.html" target="content" style="text-decoration:none">Introduction</a></li>\
   <li>Install Instructions\
   <ul>\
-    <li><a href="../html/install/rdi8.0/install_rdi.html" target="content" style="text-decoration:none">Install Plugin for RDi 9.5.1.3+</a></li>\
+    <li><a href="../html/install/rdi8.0/install_rdi.html" target="content" style="text-decoration:none">Install Plug-in for RDi 9.6.0.13+</a></li>\
     <li><a href="../html/install/install_library.html" target="content" style="text-decoration:none">Install iSphere Library</a></li>\
   </ul>\
   </li>\
@@ -105,7 +105,6 @@ document.write('\<ul id="treemenu" class="treeview">\
     </li>\
     <li><a href="../html/sourcefilecomparemergeeditor/sourcefilecomparemergeeditor.html" target="content" style="text-decoration:none">Source File Compare/Merge Editor</a>\
     <ul>\
-      <li><a href="../html/sourcefilecomparemergeeditor/rdi95extensions/rdi95extensions.html" target="content" style="text-decoration:none">RDi 9.5 Extensions</a></li>\
       <li><a href="../html/sourcefilecomparemergeeditor/preferences/preferences.html" target="content" style="text-decoration:none">Preferences</a></li>\
     </ul>\
     </li>\
