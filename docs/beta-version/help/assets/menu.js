@@ -99,7 +99,11 @@ document.write('\<ul id="treemenu" class="treeview">\
     </li>\
     <li><a href="../html/synchronizememberseditor/synchronizememberseditor.html" target="content" style="text-decoration:none">Synchronize Members Editor</a>\
     <ul>\
-      <li><a href="../html/synchronizememberseditor/performance.html" target="content" style="text-decoration:none">Performance</a></li>\
+      <li><a href="../html/synchronizememberseditor/preferences/preferences.html" target="content" style="text-decoration:none">Preferences</a></li>\
+    </ul>\
+    </li>\
+    <li><a href="../html/synchronizestreamfileseditor/synchronizestreamfileseditor.html" target="content" style="text-decoration:none">Synchronize Stream Files Editor</a>\
+    <ul>\
       <li><a href="../html/synchronizememberseditor/preferences/preferences.html" target="content" style="text-decoration:none">Preferences</a></li>\
     </ul>\
     </li>\
