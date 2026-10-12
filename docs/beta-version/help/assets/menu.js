@@ -237,11 +237,6 @@ document.write('\<ul id="treemenu" class="treeview">\
     <li><a href="../html/troubleshooting/mysterious_problems/mysterious_problems.html" target="content" style="text-decoration:none">Mysterious Problems</a></li>\
   </ul>\
   </li>\
-  <li>Appendix\
-  <ul>\
-    <li><a href="../html/appendix/upload_save_file.html" target="content" style="text-decoration:none">Upload Save File .cmd</a></li>\
-  </ul>\
-  </li>\
   <li><a href="../html/links/links.html" target="content" style="text-decoration:none">Links</a></li>\
 </ul>\
 ');
