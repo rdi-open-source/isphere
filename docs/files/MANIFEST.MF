@@ -3,7 +3,7 @@ Bundle-Version: 6.1.5.r
 X-Bundle-Update-Library: false
 X-Bundle-Update-Library-Info: .
 X-Bundle-Info: Fixed the Ignore Date Column filter so that it is only applied to source members of the iSphere compare editor.
-X-Beta-Version: 6.2.0.b002
+X-Beta-Version: 6.2.0.b004
 X-Beta-Update-Library: true
-X-Beta-Update-Library-Info: New 'Synchronize Stream Files' library services.
-X-Beta-Info: Added option 'iSphere Synchronize Stream Files' editor.
+X-Beta-Update-Library-Info: New 'Synchronize Stream Files' library services. Fix compare filter of iSphere member compare. CVTSPLF accepts spooled file numbers greater than 9999.
+X-Beta-Info: Added option 'iSphere Synchronize Stream Files' editor.\nFixed 'Unsupported encoding when reading file.' when opening a spooled file with an unsupported workspace encoding; such as 'COMPAT' in RDi 9.9.\nFixed 'Could not create stream file for spooled file on host.' for spooled file numbers greater than 9999.
