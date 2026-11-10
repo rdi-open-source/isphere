@@ -99,7 +99,11 @@ document.write('\<ul id="treemenu" class="treeview">\
     </li>\
     <li><a href="../html/synchronizememberseditor/synchronizememberseditor.html" target="content" style="text-decoration:none">Synchronize Members Editor</a>\
     <ul>\
-      <li><a href="../html/synchronizememberseditor/performance.html" target="content" style="text-decoration:none">Performance</a></li>\
+      <li><a href="../html/synchronizememberseditor/preferences/preferences.html" target="content" style="text-decoration:none">Preferences</a></li>\
+    </ul>\
+    </li>\
+    <li><a href="../html/synchronizestreamfileseditor/synchronizestreamfileseditor.html" target="content" style="text-decoration:none">Synchronize Stream Files Editor</a>\
+    <ul>\
       <li><a href="../html/synchronizememberseditor/preferences/preferences.html" target="content" style="text-decoration:none">Preferences</a></li>\
     </ul>\
     </li>\
@@ -231,11 +235,6 @@ document.write('\<ul id="treemenu" class="treeview">\
     <li><a href="../html/troubleshooting/rse_object_decoration/rse_object_decoration.html" target="content" style="text-decoration:none">RSE Object Decoration is Missing</a></li>\
     <li><a href="../html/troubleshooting/ssl_connections/ssl_connections.html" target="content" style="text-decoration:none">SSL Connection Problems</a></li>\
     <li><a href="../html/troubleshooting/mysterious_problems/mysterious_problems.html" target="content" style="text-decoration:none">Mysterious Problems</a></li>\
-  </ul>\
-  </li>\
-  <li>Appendix\
-  <ul>\
-    <li><a href="../html/appendix/upload_save_file.html" target="content" style="text-decoration:none">Upload Save File .cmd</a></li>\
   </ul>\
   </li>\
   <li><a href="../html/links/links.html" target="content" style="text-decoration:none">Links</a></li>\
